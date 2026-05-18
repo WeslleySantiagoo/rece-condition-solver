@@ -83,7 +83,7 @@ def withdraw_medication(nurse_name: str, amount: int) -> None:
 
 O estoque inicial é **100 unidades**. Cada enfermeiro solicita **30 unidades**
 (total de 4 solicitações = 120 unidades). O comportamento correto seria:
-- Ana retira 30 → estoque: 70
+- Laura retira 30 → estoque: 70
 - Bruno retira 30 → estoque: 40
 - Carla retira 30 → estoque: 10
 - Diego é **negado** (apenas 10 disponíveis, precisa de 30)
@@ -96,11 +96,11 @@ O estoque inicial é **100 unidades**. Cada enfermeiro solicita **30 unidades**
 11:53:20.398  [MainThread]  INÍCIO DA SIMULAÇÃO — SEM SINCRONISMO
 11:53:20.398  [MainThread]  Estoque inicial: 100 unidades
 11:53:20.398  [MainThread]  ============================================================
-11:53:20.399  [Enfermeiro Ana]  Enfermeiro Ana leu o estoque: 100 unidades disponíveis
+11:53:20.399  [Enfermeiro Laura]  Enfermeiro Laura leu o estoque: 100 unidades disponíveis
 11:53:20.399  [Enfermeiro Bruno]  Enfermeiro Bruno leu o estoque: 100 unidades disponíveis
 11:53:20.399  [Enfermeiro Carla]  Enfermeiro Carla leu o estoque: 100 unidades disponíveis
 11:53:20.399  [Enfermeiro Diego]  Enfermeiro Diego leu o estoque: 100 unidades disponíveis
-11:53:20.549  [Enfermeiro Ana]  Enfermeiro Ana RETIROU 30 unidades. Estoque resultante: 70
+11:53:20.549  [Enfermeiro Laura]  Enfermeiro Laura RETIROU 30 unidades. Estoque resultante: 70
 11:53:20.549  [Enfermeiro Bruno]  Enfermeiro Bruno RETIROU 30 unidades. Estoque resultante: 40
 11:53:20.549  [Enfermeiro Carla]  Enfermeiro Carla RETIROU 30 unidades. Estoque resultante: 10
 11:53:20.549  [Enfermeiro Diego]  Enfermeiro Diego RETIROU 30 unidades. Estoque resultante: -20
@@ -179,14 +179,14 @@ def withdraw_medication(nurse_name: str, amount: int) -> None:
 11:59:08.851  [MainThread]  INÍCIO DA SIMULAÇÃO — COM SINCRONISMO (Semáforo)
 11:59:08.851  [MainThread]  Estoque inicial: 100 unidades
 11:59:08.851  [MainThread]  ============================================================
-11:59:08.852  [Enfermeiro Ana]    Enfermeiro Ana aguardando acesso ao estoque...
-11:59:08.852  [Enfermeiro Ana]    Enfermeiro Ana ENTROU na seção crítica.
-11:59:08.852  [Enfermeiro Ana]    Enfermeiro Ana leu o estoque: 100 unidades disponíveis
+11:59:08.852  [Enfermeiro Laura]    Enfermeiro Laura aguardando acesso ao estoque...
+11:59:08.852  [Enfermeiro Laura]    Enfermeiro Laura ENTROU na seção crítica.
+11:59:08.852  [Enfermeiro Laura]    Enfermeiro Laura leu o estoque: 100 unidades disponíveis
 11:59:08.852  [Enfermeiro Bruno]  Enfermeiro Bruno aguardando acesso ao estoque...
 11:59:08.852  [Enfermeiro Carla]  Enfermeiro Carla aguardando acesso ao estoque...
 11:59:08.852  [Enfermeiro Diego]  Enfermeiro Diego aguardando acesso ao estoque...
-11:59:09.002  [Enfermeiro Ana]    Enfermeiro Ana RETIROU 30 unidades. Estoque resultante: 70
-11:59:09.002  [Enfermeiro Ana]    Enfermeiro Ana SAIU da seção crítica. Próximo pode entrar.
+11:59:09.002  [Enfermeiro Laura]    Enfermeiro Laura RETIROU 30 unidades. Estoque resultante: 70
+11:59:09.002  [Enfermeiro Laura]    Enfermeiro Laura SAIU da seção crítica. Próximo pode entrar.
 11:59:09.002  [Enfermeiro Bruno]  Enfermeiro Bruno ENTROU na seção crítica.
 11:59:09.002  [Enfermeiro Bruno]  Enfermeiro Bruno leu o estoque: 70 unidades disponíveis
 11:59:09.152  [Enfermeiro Bruno]  Enfermeiro Bruno RETIROU 30 unidades. Estoque resultante: 40

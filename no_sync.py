@@ -103,7 +103,7 @@ def withdraw_medication(nurse_name: str, amount: int) -> None:
 
 # ── Configuração dos enfermeiros ───────────────────────────────────────────────
 NURSES = [
-    ("Enfermeira Ana",   30),
+    ("Enfermeira Laura",   30),
     ("Enfermeiro Bruno", 30),
     ("Enfermeira Carla", 30),
     ("Enfermeiro Diego", 30),
