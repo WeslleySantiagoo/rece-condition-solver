@@ -19,22 +19,21 @@ import logging
 import threading
 import time
 
-# ── Códigos de cor ANSI ────────────────────────────────────────────────────────
-RESET   = "\033[0m"
-BOLD    = "\033[1m"
-RED     = "\033[91m"    # erros críticos / inconsistência
-YELLOW  = "\033[93m"    # avisos / negação de acesso
-GREEN   = "\033[92m"    # saída da seção crítica (liberação do recurso)
-BLUE    = "\033[94m"    # aguardando / entrada na seção crítica
-CYAN    = "\033[96m"    # leitura de estoque (informativo)
-WHITE   = "\033[97m"    # mensagens neutras / cabeçalho
-MAGENTA = "\033[95m"    # retirada bem-sucedida
-
-
 class ColoredFormatter(logging.Formatter):
     """Formatter que aplica cor ANSI à mensagem conforme palavras-chave."""
 
     def format(self, record: logging.LogRecord) -> str:
+        # ── Códigos de cor ANSI ────────────────────────────────────────────────────────
+        RESET   = "\033[0m"
+        BOLD    = "\033[1m"
+        RED     = "\033[91m"    # erros críticos / inconsistência
+        YELLOW  = "\033[93m"    # avisos / negação de acesso
+        GREEN   = "\033[92m"    # saída da seção crítica (liberação do recurso)
+        BLUE    = "\033[94m"    # aguardando / entrada na seção crítica
+        CYAN    = "\033[96m"    # leitura de estoque (informativo)
+        WHITE   = "\033[97m"    # mensagens neutras / cabeçalho
+        MAGENTA = "\033[95m"    # retirada bem-sucedida
+
         msg = super().format(record)
         text = record.getMessage()
 
@@ -132,9 +131,9 @@ def withdraw_medication(nurse_name: str, amount: int) -> None:
 
 # ── Configuração dos enfermeiros ───────────────────────────────────────────────
 NURSES = [
-    ("Enfermeiro Ana",   30),
+    ("Enfermeira Ana",   30),
     ("Enfermeiro Bruno", 30),
-    ("Enfermeiro Carla", 30),
+    ("Enfermeira Carla", 30),
     ("Enfermeiro Diego", 30),
 ]
 
